@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "tttgame";
+  src: url(font/StraightHand.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "tttgame", cursive;
+
+  display: grid;
+  grid-template-rows: 20% 70% 10%;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+#headTitle {
+  display: grid;
+  font-size: 12vh;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  align-items: center;
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  font-size: 90px;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  background-color: rgb(74, 69, 71);
+  color: white;
+}
