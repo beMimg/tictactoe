@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --pmr-color: #292a2c;
+  --scd-color: #f0f0f0;
+  --winning-blocks: #db4545;
+}
+
 @font-face {
   font-family: "tttgame";
   src: url(font/StraightHand.ttf);
@@ -49,6 +55,34 @@ main {
   cursor: pointer;
   text-align: center;
   border: 0;
-  background-color: rgb(74, 69, 71);
+  background-color: var(--pmr-color);
   color: white;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#restartBtn {
+  margin: 1vh;
+  border: 0;
+  background-color: var(--pmr-color);
+  color: var(--scd-color);
+  font-size: 4vh;
+  font-family: "tttgame";
+  cursor: pointer;
+}
+
+footer div {
+  margin: 1vh;
+  background-color: var(--pmr-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#statusText {
+  font-size: 3vh;
+  color: var(--scd-color);
 }
