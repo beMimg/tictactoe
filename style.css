@@ -58,10 +58,18 @@ main {
   border: 1px solid black;
   font-size: 90px;
   cursor: pointer;
-  text-align: center;
   border: 0;
   background-color: var(--pmr-color);
   color: white;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.cell:active {
+  width: 120px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #0056b3;
 }
 
 footer {
@@ -77,6 +85,17 @@ footer {
   font-size: 4vh;
   font-family: "tttgame";
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#restartBtn:hover {
+  color: var(--winning-blocks);
+}
+
+#restartBtn:active {
+  border-radius: 50px;
+
+  font-size: 1vh;
 }
 
 footer div {

@@ -83,3 +83,13 @@ function restartGame() {
   cells.forEach((cell) => (cell.textContent = ""));
   running = true;
 }
+
+restartBtn.addEventListener("click", function () {
+  let title = document.querySelector("#headTitle");
+  title.style.color = "red";
+  title.style.transition = "color 0.5s ease";
+
+  setTimeout(function () {
+    title.style.color = "initial";
+  }, 400);
+});
