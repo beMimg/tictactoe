@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.getElementById("statusText");
 const restartBtn = document.getElementById("restartBtn");
+const headTitle = document.getElementById("headTitle");
 const winConditions = [
   [0, 1, 2],
   [3, 4, 5],
@@ -21,7 +22,7 @@ startGame();
 function startGame() {
   cells.forEach((cell) => cell.addEventListener("click", cellClicked));
   restartBtn.addEventListener("click", restartGame);
-  statusText.textContent = `${currentPlayer}'s turn`;
+  statusText.textContent = `${currentPlayer} first`;
   running = true;
 }
 
@@ -31,6 +32,7 @@ function cellClicked() {
   if (options[cellIndex] != "" || !running) {
     return;
   }
+  statusText.textContent = ". . .";
 
   updateCell(this, cellIndex);
 
@@ -44,7 +46,7 @@ function updateCell(cell, index) {
 
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
-  statusText.textContent = `${currentPlayer}'s turn`;
+  headTitle.textContent = `${currentPlayer}'s turn`;
 }
 
 function checkWinner() {
@@ -66,7 +68,8 @@ function checkWinner() {
   }
 
   if (roundWon) {
-    statusText.textContent = `${currentPlayer} wins`;
+    statusText.textContent = ` GAME OVER`;
+    headTitle.textContent = `${currentPlayer} won`;
     running = false;
   } else if (!options.includes("")) {
     statusText.textContent = `Draw!`;
@@ -81,6 +84,7 @@ function restartGame() {
   options = ["", "", "", "", "", "", "", "", ""];
   statusText.textContent = `${currentPlayer}'s turn`;
   cells.forEach((cell) => (cell.textContent = ""));
+  headTitle.textContent = "TICTACTOE";
   running = true;
 }
 
