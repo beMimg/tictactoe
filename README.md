@@ -1,8 +1,9 @@
-# tictactoe
+# Tictactoe
 
 Tic-Tac-Toe Game
 This is a simple web-based Tic-Tac-Toe game built with HTML, CSS, and JavaScript. You can play the game online https://bemimg.github.io/tictactoe/.
 
+![Screenshot from 2023-09-05 23-13-52](https://github.com/beMimg/tictactoe/assets/126000960/4f72e637-9e4b-4841-b46b-d7289c6c000c)
 
 
 How to Play
